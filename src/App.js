@@ -49,8 +49,8 @@ const finalSearch = (e) => {
       <input className='search' placeholder='search'onChange={myRecipeSearch} value={mySearch} ></input>
     </form>
     </div>
-   {show ? <SideBlock/> : myRecipes.map(element => (
-      <RecipesComponent key={element.recipe.calories}
+   {show ? <SideBlock/> : myRecipes.map((element,index) => (
+      <RecipesComponent key={index}
        label={element.recipe.label} 
        image={element.recipe.image} 
        calories={element.recipe.calories}
